@@ -1,65 +1,77 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
 
-export default function Home() {
+import Typography from '@material-ui/core/Typography';
+
+import Grid from '@material-ui/core/Grid';
+
+import dynamic from 'next/dynamic';
+const Options = dynamic(() => import('../components/options'));
+
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+
+//import { cdnURL } from 'utils/constants';
+
+const useStyles = makeStyles((theme) => ({
+  contentContainer: {
+    margin: 'auto',
+    width: '95%',
+  },
+  
+  rootContainer: {
+    width: '100%',
+    marginBottom: 80,
+    align: 'center'
+  },
+  contentContainer2: {
+    textAlign: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '100%',
+  }
+}));
+
+const Page = ({faqs}) => {
+  // Get the data of the current list.
+  
+  const classes = useStyles();
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className={classes.rootContainer}>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div style={{ height: 100 }}></div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <div style={{ margin: 'auto', width: '90%' }}>
+        <Grid container direction="row" alignItems="stretch" className={classes.contentContainer}>
+          
+          <Grid item lg={9} className={classes.rootContainer}>
+            <Grid container direction="row" spacing={3} alignItems="stretch" className={classes.contentContainer}>
+              <Grid item md={4} className={classes.contentContainer2}>
+                <Options />
+              </Grid>
+              <Grid item md={8} id='textContainer' className={classes.contentContainer2}>
+                <Typography id="p0" variant="h4" component="h2">Ecosummit 2020</Typography>
+                <Typography id="p1" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }}>The <b>Ecosummit 2020</b> is the <b>First National Youth Environmental Forum</b> dedicated to discussing key environmental topics that revolve around environmental justice, sustainability and climate action. The forum will bring together exemplary environmental advocates from the Philippines and the world to tell stories of inspiration and challenge to over 200 youth from across the Philippines.</Typography>
+                <Typography id="p2" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }}>This one-day convention that will be held on <b>December 12</b> shall provide a platform to give light to the urgency of responding to climate injustices and build striking environmental awareness that will spark movement from the youth to align their commitment to climate action.</Typography>
+                <Typography id="p3" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }}>The <b>SAMAHAN ng mga Mag-aaral ng Pamantasan ng Ateneo de Davao</b>, the Official Student Government of Ateneo de Davao University, is the lead organizer of the the summit. This year, the SAMAHAN carries with it the commitment to the environment through events that aim to bring awareness to the youth and inspire them to devote themselves to climate action. </Typography>
+                <Typography id="p4" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }} />
+              </Grid>
+            </Grid>
+          </Grid>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Grid item lg={3}>
+            <div style={{ height: 20 }} />
+            <TwitterTimelineEmbed
+              sourceType="profile"
+              screenName="ecosummit2020"
+              options={{height: 800, width: '100vw'}}
+            />
+          </Grid>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        </Grid>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Page;

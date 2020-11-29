@@ -7,10 +7,24 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #007f00;
   text-decoration: none;
+}
+
+a:hover {
+  color: #004c00;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.fadeElement {
+    animation: fadeOutIn 0.25s linear forwards;
+}
+
+@keyframes fadeOutIn {
+ 0% { opacity:1; }
+ 50% { opacity:0; } 
+ 100% { opacity:1; } 
 }
