@@ -16,8 +16,8 @@ export default responsiveFontSizes(createMuiTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 1220,
-      lg: 1600,
+      md: 1000,
+      lg: 1280,
       xl: 1920,
     },
   },
@@ -51,7 +51,7 @@ export default responsiveFontSizes(createMuiTheme({
       fontWeight: 500
     },
     body1: {
-      fontSize: 24,
+      fontSize: '1.25rem',
     },
     fontFamily: 'Open Sans',
     fontWeight: 400,

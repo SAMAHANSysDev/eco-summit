@@ -14,8 +14,11 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     width: '95%'
   },
+  cardRootContainer: {
+    width: '90%',
+  },
   cardRoot: {
-    minWidth: 300,
+    width: '100%',
     color: theme.palette.success.main,
     borderColor: theme.palette.success.main
   },
@@ -52,44 +55,44 @@ const Page = () => {
 
   return (
     <Grid container direction="column" spacing={2} alignItems="center" justify="center" className={classes.contentContainer}>
-      <Grid item sm>
+      <Grid item sm className={classes.cardRootContainer}>
         <Card className={classes.cardRoot} variant="outlined">
           <CardActionArea className='cardbtn' onClick={ () => UpdateText(Texts[0]) }>
             <CardContent>
-              <Typography variant="h5" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
+              <Typography variant="h6" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
                 Ecosummit 2020
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </Grid>
-      <Grid item sm>
+      <Grid item sm className={classes.cardRootContainer}>
         <Card className={classes.cardRoot} variant="outlined">
           <CardActionArea className='cardbtn' onClick={ () => UpdateText(Texts[1]) }>
             <CardContent>
-              <Typography variant="h5" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
+              <Typography variant="h6" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
                 Delegate Application
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </Grid>
-      <Grid item sm>
+      <Grid item sm className={classes.cardRootContainer}>
         <Card className={classes.cardRoot} variant="outlined">
           <CardActionArea className='cardbtn' onClick={ () => UpdateText(Texts[2]) }>
             <CardContent>
-              <Typography variant="h5" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
+              <Typography variant="h6" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
                 Meet the Speakers
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </Grid>
-      <Grid item sm>
+      <Grid item sm className={classes.cardRootContainer}>
         <Card className={classes.cardRoot} variant="outlined">
           <CardActionArea className='cardbtn' onClick={ () => UpdateText(Texts[3]) }>
             <CardContent>
-              <Typography variant="h5" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
+              <Typography variant="h6" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
                 Contact Us
               </Typography>
             </CardContent>

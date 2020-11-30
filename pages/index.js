@@ -44,12 +44,12 @@ const Page = ({faqs}) => {
       <div style={{ margin: 'auto', width: '90%' }}>
         <Grid container direction="row" alignItems="stretch" className={classes.contentContainer}>
           
-          <Grid item lg={9} className={classes.rootContainer}>
+          <Grid item md={9} className={classes.rootContainer}>
             <Grid container direction="row" spacing={3} alignItems="stretch" className={classes.contentContainer}>
-              <Grid item md={4} className={classes.contentContainer2}>
+              <Grid item sm={4} className={classes.contentContainer2}>
                 <Options />
               </Grid>
-              <Grid item md={8} id='textContainer' className={classes.contentContainer2}>
+              <Grid item sm={8} id='textContainer' className={classes.contentContainer2}>
                 <Typography id="p0" variant="h4" component="h2">Ecosummit 2020</Typography>
                 <Typography id="p1" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }}>The <b>Ecosummit 2020</b> is the <b>First National Youth Environmental Forum</b> dedicated to discussing key environmental topics that revolve around environmental justice, sustainability and climate action. The forum will bring together exemplary environmental advocates from the Philippines and the world to tell stories of inspiration and challenge to over 200 youth from across the Philippines.</Typography>
                 <Typography id="p2" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }}>This one-day convention that will be held on <b>December 12</b> shall provide a platform to give light to the urgency of responding to climate injustices and build striking environmental awareness that will spark movement from the youth to align their commitment to climate action.</Typography>
@@ -59,7 +59,7 @@ const Page = ({faqs}) => {
             </Grid>
           </Grid>
 
-          <Grid item lg={3}>
+          <Grid item md={3}>
             <div style={{ height: 20 }} />
             <TwitterTimelineEmbed
               sourceType="profile"
