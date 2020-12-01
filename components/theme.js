@@ -3,7 +3,7 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 export default responsiveFontSizes(createMuiTheme({
   palette: {
     primary: {
-      main: "#333",
+      main: "#64a4af",
     },
     secondary: {
       main: "#fff",
@@ -15,7 +15,7 @@ export default responsiveFontSizes(createMuiTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600,
+      sm: 800,
       md: 1000,
       lg: 1280,
       xl: 1920,
@@ -36,11 +36,12 @@ export default responsiveFontSizes(createMuiTheme({
     },
     h3: {
       fontFamily: 'Montserrat',
-      fontWeight: 700
+      fontWeight: 900
     },
     h4: {
       fontFamily: 'Montserrat',
-      fontWeight: 700
+      letterSpacing: '0.1em',
+      fontWeight: 900
     },
     h5: {
       fontFamily: 'Montserrat',
@@ -48,12 +49,14 @@ export default responsiveFontSizes(createMuiTheme({
     },
     h6: {
       fontFamily: 'Montserrat',
-      fontWeight: 500
+      letterSpacing: '0.015em',
+      fontWeight: 600
     },
     body1: {
       fontSize: '1.25rem',
+      color: '#233e4c',
     },
-    fontFamily: 'Open Sans',
+    fontFamily: 'Montserrat',
     fontWeight: 400,
   },
   spacing: 10
