@@ -36,17 +36,12 @@ var currentChoice = 0;
 const updateText = (choice) => {
   if (currentChoice != choice) {
     let textContainer = document.querySelector("#textContainer");
-    textContainer.classList.add("fadeElement");
-
-    setTimeout(() => textContainer.classList.remove("fadeElement"), 250);
-    setTimeout(() => {
-      let boxes = document.querySelectorAll('.MuiBox-root');
-      boxes[currentChoice].style.visibility = 'hidden';
-      boxes[currentChoice].style.height = 0;
-      boxes[choice].style.visibility = 'visible';
-      boxes[choice].style.height = 'auto';
-      currentChoice = choice;
-    }, 125);
+    let boxes = document.querySelectorAll('.MuiBox-root');
+    boxes[currentChoice].style.visibility = 'hidden';
+    boxes[currentChoice].style.height = 0;
+    boxes[choice].style.visibility = 'visible';
+    boxes[choice].style.height = 'auto';
+    currentChoice = choice;
 
     if (choice == 3) {
       for (let el of document.querySelectorAll('.partnerCard'))
