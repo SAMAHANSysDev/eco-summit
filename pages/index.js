@@ -2,11 +2,13 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 
 import Typography from '@material-ui/core/Typography';
-
+import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 
 import dynamic from 'next/dynamic';
 const Options = dynamic(() => import('../components/options'));
+const Partners = dynamic(() => import('../components/partners'));
 
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
@@ -28,6 +30,11 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '100%',
+  },
+  textContent: {
+    textAlign: 'justify',
+    marginTop: '20px',
+    marginBottom: '20px',
   }
 }));
 
@@ -45,16 +52,43 @@ const Page = ({faqs}) => {
         <Grid container direction="row" spacing={1} alignItems="stretch" className={classes.contentContainer}>
           
           <Grid item md={9} className={classes.rootContainer}>
-            <Grid container direction="row" spacing={3} alignItems="stretch" className={classes.contentContainer}>
+            <Grid container direction="row" alignItems="stretch" className={classes.contentContainer}>
               <Grid item sm={4} className={classes.contentContainer2}>
                 <Options />
               </Grid>
               <Grid item sm={8} id='textContainer' className={classes.contentContainer2}>
-                <Typography id="p0" variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}>ECO</Typography><Typography variant="h4" component="span" style={{ color: '#548c96' }}>SUMMIT</Typography><Typography variant="h4" component="span" style={{ color: '#548c96', fontWeight: 400 }}>2020</Typography></Typography>
-                <Typography id="p1" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }}>The <b>Ecosummit 2020</b> is the <b>First National Youth Environmental Forum</b> dedicated to discussing key environmental topics that revolve around environmental justice, sustainability and climate action. The forum will bring together exemplary environmental advocates from the Philippines and the world to tell stories of inspiration and challenge to over 200 youth from across the Philippines.</Typography>
-                <Typography id="p2" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }}>This one-day convention that will be held on <b>December 12</b> shall provide a platform to give light to the urgency of responding to climate injustices and build striking environmental awareness that will spark movement from the youth to align their commitment to climate action.</Typography>
-                <Typography id="p3" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }}>The <b>SAMAHAN ng mga Mag-aaral ng Pamantasan ng Ateneo de Davao</b>, the Official Student Government of Ateneo de Davao University, is the lead organizer of the the summit. This year, the SAMAHAN carries with it the commitment to the environment through events that aim to bring awareness to the youth and inspire them to devote themselves to climate action. </Typography>
-                <Typography id="p4" variant="body1" component="p" style={{ textAlign: 'justify', marginTop: '20px', marginBottom: '20px' }} />
+                
+                <Box style={{visibility: 'visible', height: 'auto'}}>
+                  <Typography variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}>ECO</Typography><Typography variant="h4" component="span" style={{ color: '#548c96' }}>SUMMIT</Typography><Typography variant="h4" component="span" style={{ color: '#548c96', fontWeight: 400 }}>2020</Typography></Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent}>The <b>Ecosummit 2020</b> is the <b>First National Youth Environmental Forum</b> dedicated to discussing key environmental topics that revolve around environmental justice, sustainability and climate action. The forum will bring together exemplary environmental advocates from the Philippines and the world to tell stories of inspiration and challenge to over 200 youth from across the Philippines.</Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent}>This one-day convention that will be held on <b>December 12</b> shall provide a platform to give light to the urgency of responding to climate injustices and build striking environmental awareness that will spark movement from the youth to align their commitment to climate action.</Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent}>The <b>SAMAHAN ng mga Mag-aaral ng Pamantasan ng Ateneo de Davao</b>, the Official Student Government of Ateneo de Davao University, is the lead organizer of the the summit. This year, the SAMAHAN carries with it the commitment to the environment through events that aim to bring awareness to the youth and inspire them to devote themselves to climate action. </Typography>
+                </Box>
+
+                <Box style={{visibility: 'hidden', height: 0}}>
+                  <Typography variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}> DELEGATE</Typography> <Typography variant="h4" component="span" style={{ color: '#548c96' }}>APPLICATION</Typography></Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 600, letterSpacing: '0.05rem', fontSize: '1.5rem'}}>BE A DELEGATE!</Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent}>Ecosummit 2020 aims to convene over 200 youth leaders and advocates from the whole Philippines to discuss climate change, environmental justice and sustainability.</Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 600, letterSpacing: '0.05rem', fontSize: '1.5rem'}}>We invite you to be part of this historic national summit.</Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 700, letterSpacing: '0.05rem', fontSize: '2rem'}}><Link href='https://bit.ly/EcoSummit2020Registration' target='_blank'>Register Now!</Link></Typography>
+                </Box>
+
+                <Box style={{visibility: 'hidden', height: 0}}>
+                  <Typography variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}>MEET</Typography> <Typography variant="h4" component="span" style={{ color: '#d17a5e', fontWeight: 400 }}>THE</Typography> <Typography variant="h4" component="span" style={{ color: '#548c96' }}>SPEAKERS</Typography></Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent}>Details of the Ecosummit 2020 speakers will be available soon.</Typography>
+                </Box>
+
+                <Box style={{visibility: 'hidden', height: 0}}>
+                  <Typography variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}>OUR</Typography> <Typography variant="h4" component="span" style={{ color: '#548c96' }}>PARTNERS</Typography></Typography>
+                  <Partners />
+                </Box>
+
+                <Box style={{visibility: 'hidden', height: 0}}>
+                  <Typography variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}>CONTACT</Typography> <Typography variant="h4" component="span" style={{ color: '#548c96' }}>US</Typography></Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center' }}>Facebook: <Link href='https://www.facebook.com/2020ecosummit' target='_blank'>Ecosummit 2020</Link></Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center' }}>Twitter: <Link href='https://www.twitter.com/ecosummit2020' target='_blank'>Ecosummit2020</Link></Typography>
+                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center' }}>Email: <Link href='mailto: ecosummit.ph@gmail.com' target='_blank'>ecosummit.ph@gmail.com</Link></Typography>
+                </Box>
               </Grid>
             </Grid>
           </Grid>
