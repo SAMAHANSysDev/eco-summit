@@ -67,7 +67,7 @@ const Page = ({faqs}) => {
                 </Box>
 
                 <Box style={{visibility: 'hidden', height: '0'}}>
-                  <Typography variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}> DELEGATE</Typography> <Typography variant="h4" component="span" style={{ color: '#548c96' }}>APPLICATION</Typography></Typography>
+                  <Typography variant="h4" component="h2" style={{ color: '#d17a5e' }}>DELEGATES</Typography>
                   <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 600, letterSpacing: '0.05rem', fontSize: '1.5rem'}}>BE A DELEGATE!</Typography>
                   <Typography variant="body1" component="p" className={classes.textContent}>Ecosummit 2020 aims to convene over 200 youth leaders and advocates from the whole Philippines to discuss climate change, environmental justice and sustainability.</Typography>
                   <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 600, letterSpacing: '0.05rem', fontSize: '1.5rem'}}>We invite you to be part of this historic national summit.</Typography>

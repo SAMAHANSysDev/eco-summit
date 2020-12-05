@@ -88,7 +88,7 @@ const Page = () => {
           <CardActionArea className='cardbtn' onClick={ () => updateText(1) }>
             <CardContent>
               <Typography variant="h6" component="h2" className={classes.cardText} style={{ lineHeight: '1.5em' }}>
-                DELEGATE APPLICATION
+                DELEGATES
               </Typography>
             </CardContent>
           </CardActionArea>

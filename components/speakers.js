@@ -52,7 +52,7 @@ const Page = () => {
               Executive Director
             </Typography>
             <Typography gutterBottom variant="body1" component="h2" className={classes.cardText}>
-              Interfacing Development Interventions for Sustainability
+              Interfacing Development Interventions for Sustainability (IDIS)
             </Typography>
           </CardContent>
         </Card>
@@ -118,6 +118,23 @@ const Page = () => {
             </Typography>
             <Typography gutterBottom variant="body1" component="h2" className={classes.cardText}>
               Ateneo School of Government
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+
+      <Grid item sm={6} className={classes.cardRootContainer + " speakerCard"}>
+        <Card className={classes.cardRoot + " speakerCard"} variant="outlined">
+          <CardContent>
+            <img src={"/speakers/abiera.jpg"} className={classes.imageContent} />
+            <Typography gutterBottom variant="body1" component="h2" className={classes.cardText} style={{ fontWeight: 600 }}>
+              Dun Oliver Abiera
+            </Typography>
+            <Typography gutterBottom variant="body1" component="h2" className={classes.cardText} style={{ fontStyle: 'italic' }}>
+              Founder
+            </Typography>
+            <Typography gutterBottom variant="body1" component="h2" className={classes.cardText}>
+              Youth Advocates Building Opportunities and Network in Governance (YABONG) Philippines
             </Typography>
           </CardContent>
         </Card>
