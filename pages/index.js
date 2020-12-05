@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 import dynamic from 'next/dynamic';
 const Options = dynamic(() => import('../components/options'));
 const Partners = dynamic(() => import('../components/partners'));
+const Speakers = dynamic(() => import('../components/speakers'));
 
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
@@ -65,7 +66,7 @@ const Page = ({faqs}) => {
                   <Typography variant="body1" component="p" className={classes.textContent}>The <b>SAMAHAN ng mga Mag-aaral ng Pamantasan ng Ateneo de Davao</b>, the Official Student Government of Ateneo de Davao University, is the lead organizer of the the summit. This year, the SAMAHAN carries with it the commitment to the environment through events that aim to bring awareness to the youth and inspire them to devote themselves to climate action. </Typography>
                 </Box>
 
-                <Box style={{visibility: 'hidden', height: 0}}>
+                <Box style={{visibility: 'hidden', height: '0'}}>
                   <Typography variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}> DELEGATE</Typography> <Typography variant="h4" component="span" style={{ color: '#548c96' }}>APPLICATION</Typography></Typography>
                   <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 600, letterSpacing: '0.05rem', fontSize: '1.5rem'}}>BE A DELEGATE!</Typography>
                   <Typography variant="body1" component="p" className={classes.textContent}>Ecosummit 2020 aims to convene over 200 youth leaders and advocates from the whole Philippines to discuss climate change, environmental justice and sustainability.</Typography>
@@ -75,7 +76,7 @@ const Page = ({faqs}) => {
 
                 <Box style={{visibility: 'hidden', height: 0}}>
                   <Typography variant="h4" component="h2"><Typography variant="h4" component="span" style={{ color: '#d17a5e' }}>MEET</Typography> <Typography variant="h4" component="span" style={{ color: '#d17a5e', fontWeight: 400 }}>THE</Typography> <Typography variant="h4" component="span" style={{ color: '#548c96' }}>SPEAKERS</Typography></Typography>
-                  <Typography variant="body1" component="p" className={classes.textContent}>Details of the Ecosummit 2020 speakers will be available soon.</Typography>
+                  <Speakers />
                 </Box>
 
                 <Box style={{visibility: 'hidden', height: 0}}>

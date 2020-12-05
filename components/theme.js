@@ -53,7 +53,6 @@ export default responsiveFontSizes(createMuiTheme({
       fontWeight: 600
     },
     body1: {
-      fontSize: '1.25rem',
       color: '#233e4c',
     },
     fontFamily: 'Montserrat',

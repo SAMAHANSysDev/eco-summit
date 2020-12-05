@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
   	height: 0,
     width: '100%',
     color: '#233e4c',
-    border: 0,
   },
   cardText: {
     fontFamily: 'Open Sans',
@@ -35,7 +34,7 @@ const Item = ({ name, img }) => {
   const classes = useStyles();
 
   return (
-	<Grid item md={4} className={classes.cardRootContainer + " partnerCard"}>
+	<Grid item sm={4} className={classes.cardRootContainer + " partnerCard"}>
       <Card className={classes.cardRoot + " partnerCard"} variant="outlined">
         <CardContent>
           <img src={"/internal/" + img} className={classes.imageContent} />
