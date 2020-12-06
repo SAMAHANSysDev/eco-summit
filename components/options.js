@@ -48,10 +48,22 @@ const updateText = (choice) => {
         el.style.height = "auto";
       for (let el of document.querySelectorAll('.speakerCard'))
         el.style.height = 0;
+      for (let el of document.querySelectorAll('.delegateItem'))
+        el.style.height = 0;
     }
     else if (choice == 2) {
       for (let el of document.querySelectorAll('.speakerCard'))
         el.style.height = "auto";
+      for (let el of document.querySelectorAll('.partnerCard'))
+        el.style.height = 0;
+      for (let el of document.querySelectorAll('.delegateItem'))
+        el.style.height = 0;
+    }
+    else if (choice == 1) {
+      for (let el of document.querySelectorAll('.delegateItem'))
+        el.style.height = "auto";
+      for (let el of document.querySelectorAll('.speakerCard'))
+        el.style.height = 0;
       for (let el of document.querySelectorAll('.partnerCard'))
         el.style.height = 0;
     }
@@ -59,6 +71,8 @@ const updateText = (choice) => {
       for (let el of document.querySelectorAll('.partnerCard'))
         el.style.height = 0;
       for (let el of document.querySelectorAll('.speakerCard'))
+        el.style.height = 0;
+      for (let el of document.querySelectorAll('.delegateItem'))
         el.style.height = 0;
     }
   }

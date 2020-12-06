@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic';
 const Options = dynamic(() => import('../components/options'));
 const Partners = dynamic(() => import('../components/partners'));
 const Speakers = dynamic(() => import('../components/speakers'));
+const Delegates = dynamic(() => import('../components/delegates'));
 
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
@@ -31,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '100%',
+    padding: '2%',
   },
   textContent: {
     textAlign: 'justify',
@@ -49,8 +51,8 @@ const Page = ({faqs}) => {
 
       <div style={{ height: 100 }}></div>
 
-      <div style={{ margin: 'auto', width: '90%' }}>
-        <Grid container direction="row" spacing={1} alignItems="stretch" className={classes.contentContainer}>
+      <div style={{ margin: 'auto' }}>
+        <Grid container direction="row" spacing={3} alignItems="stretch" className={classes.contentContainer}>
           
           <Grid item md={9} className={classes.rootContainer}>
             <Grid container direction="row" alignItems="stretch" className={classes.contentContainer}>
@@ -67,11 +69,8 @@ const Page = ({faqs}) => {
                 </Box>
 
                 <Box style={{visibility: 'hidden', height: '0'}}>
-                  <Typography variant="h4" component="h2" style={{ color: '#d17a5e' }}>DELEGATES</Typography>
-                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 600, letterSpacing: '0.05rem', fontSize: '1.5rem'}}>BE A DELEGATE!</Typography>
-                  <Typography variant="body1" component="p" className={classes.textContent}>Ecosummit 2020 aims to convene over 200 youth leaders and advocates from the whole Philippines to discuss climate change, environmental justice and sustainability.</Typography>
-                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 600, letterSpacing: '0.05rem', fontSize: '1.5rem'}}>We invite you to be part of this historic national summit.</Typography>
-                  <Typography variant="body1" component="p" className={classes.textContent} style={{ textAlign: 'center', fontWeight: 700, letterSpacing: '0.05rem', fontSize: '2rem'}}><Link href='https://bit.ly/EcoSummit2020Registration' target='_blank'>Register Now!</Link></Typography>
+                  <Typography variant="h4" component="h2" style={{ color: '#d17a5e', paddingBottom: 10 }}>DELEGATES</Typography>
+                  <Delegates />
                 </Box>
 
                 <Box style={{visibility: 'hidden', height: 0}}>
