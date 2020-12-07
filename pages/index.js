@@ -68,8 +68,9 @@ const Page = ({faqs}) => {
                   <Typography variant="body1" component="p" className={classes.textContent}>The <b>SAMAHAN ng mga Mag-aaral ng Pamantasan ng Ateneo de Davao</b>, the Official Student Government of Ateneo de Davao University, is the lead organizer of the the summit. This year, the SAMAHAN carries with it the commitment to the environment through events that aim to bring awareness to the youth and inspire them to devote themselves to climate action. </Typography>
                 </Box>
 
-                <Box style={{visibility: 'hidden', height: '0'}}>
-                  <Typography variant="h4" component="h2" style={{ color: '#d17a5e', paddingBottom: 10 }}>DELEGATES</Typography>
+                <Box style={{visibility: 'hidden'}}>
+                  <Typography variant="h4" component="h2" style={{ color: '#d17a5e' }}>DELEGATES</Typography>
+                  <div style={{ height: 20 }}></div>
                   <Delegates />
                 </Box>
 

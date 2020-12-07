@@ -61,7 +61,7 @@ const updateText = (choice) => {
     }
     else if (choice == 1) {
       for (let el of document.querySelectorAll('.delegateItem'))
-        el.style.height = "auto";
+        el.style.height = "75vh";
       for (let el of document.querySelectorAll('.speakerCard'))
         el.style.height = 0;
       for (let el of document.querySelectorAll('.partnerCard'))
