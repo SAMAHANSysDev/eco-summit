@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
   cardRoot: {
     height: 0,
     width: '100%',
-    color: '#233e4c',
     border: 0,
+    background: 'rgba(0, 0, 0, 0)'
   },
   cardText: {
     fontFamily: 'Open Sans',

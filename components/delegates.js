@@ -7,6 +7,7 @@ import { delegatesList } from '../utils/data';
 
 const useStyles = makeStyles((theme) => ({
   rootContainer: {
+    background: '#fff',
     width: '100%',
   }
 }));
